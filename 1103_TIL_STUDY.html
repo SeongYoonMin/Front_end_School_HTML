@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="./1103_TIL_Style.css">
+    <style>
+        h2 {
+            background-color: blue;
+        }
+        .p_blue{
+            color: blue;
+        }
+        #p_red{
+            color: red;
+        }
+        div p{
+            font-size: 80px;
+        }
+        h2 > strong{
+            color: grey;
+        }
+        h1 + p{
+            color: hotpink;
+        }
+        h2 ~ p{
+            color: indigo;
+        }
+        .pseudo:first-child{
+            color: red;
+        }
+        .pseudo:nth-child(2){
+            color: orange;
+        }
+        .pseudo:last-child{
+            color: yellow;
+        }
+        h4::after{
+            content: 'cm'
+        }
+    </style>
+</head>
+<body>
+    <h1>살몬</h1>
+    <h2>블루</h2>
+    <h2>
+        <strong>
+            회색
+        </strong>
+    </h2>
+    <h3 style="background-color: yellow;">노랑색</h3>
+    <p class="p_blue">파랑 글씨</p>
+    <p id="p_red">빨간 글씨</p>
+    <!-- 복합 선택자 -->
+    <p>그냥 사이즈</p>
+    <div>
+        <p>큰 사이즈</p>
+    </div>
+    <h1>다음은 핑크</h1>
+    <p>핑크색</p>
+    <p>기존색</p>
+    <h2>다음은 인디고</h2>
+    <p>인디고</p>
+    <p>나도인디고</p>
+    <p>너도인디고?</p>
+    <ul>
+        <li class="pseudo">빨</li>
+        <li class="pseudo">주</li>
+        <li class="pseudo">노</li>
+    </ul>
+    <h4>1M는 100</h4>
+</body>
+</html>
