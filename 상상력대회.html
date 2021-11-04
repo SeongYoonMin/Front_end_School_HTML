@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상상력 대회</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background: rgb(0, 14, 77);
+        }
+        .char_rel{
+            position: relative;
+            margin: 100px auto;
+            width: 400px;
+            height: 380 px;
+        }
+        .imaginechar{
+            position: absolute; 
+            width: 400px;
+            height: 367px;
+            border-radius: 100%;
+            border: 10px solid #000;
+            background: #f1c637;
+        }
+        .imaginechar_left_ear{
+            position: absolute;
+            width: 92px;
+            height: 142px;
+            border: 10px solid black;
+            border-radius: 100%;
+            background: #f1c637;
+            z-index: -2;
+            transform: rotate(-20deg);
+            left:0;
+        }
+        .imaginechar_left_left_ear{
+            position: absolute;
+            width: 35px;
+            height: 60px;
+            /* border: 0.3px solid pink; */
+            border-radius: 100%;
+            background: hotpink;
+            z-index: -1;
+            transform: rotate(0deg);
+            right: 20px;
+            top: 10px;
+        }
+        .imaginechar_right_ear{
+            position: absolute;
+            position: absolute;
+            width: 92px;
+            height: 142px;
+            border: 10px solid black;
+            border-radius: 100%;
+            background: #f1c637;
+            z-index: -2;
+            transform: rotate(20deg);
+            right: 0px;
+        }
+        .imaginechar_right_right_ear{
+            position: absolute;
+            width: 35px;
+            height: 60px;
+            border-radius: 100%;
+            background: hotpink;
+            z-index: -1;
+            transform: rotate(0deg);
+            right: 20px;
+            top: 10px;
+        }
+        .imaginechar_face{
+            position: absolute;
+        }
+        .imaginechar_stripe_1{
+            position: absolute;
+            width: 40px;
+            height: 142px;
+            border: 10px solid black;
+            border-radius: 100%;
+            background: #000;
+            transform: rotate(-90deg);
+            left: 170px;
+            top: 10px;
+        }
+        .imaginechar_stripe_2{
+            position: absolute;
+            width: 40px;
+            height: 142px;
+            border: 10px solid black;
+            border-radius: 100%;
+            background: #000;
+            transform: rotate(-90deg);
+            left: 170px;
+            bottom: -85px;
+        }
+        .imaginechar_stripe_3{
+            position: absolute;
+            width: 40px;
+            height: 142px;
+            border: 10px solid black;
+            border-radius: 100%;
+            background: #000;
+            left: 170px;
+            top: 0px;
+        }
+        .imaginechar_left_eye{
+            position: absolute;
+            top: 147px;
+            width: 33px;
+            height: 52px;
+            border-radius: 100%;
+            border: 10px solid black;
+            background: #fff;
+            left: 90px;
+        }
+        .imaginechar_right_eye{
+            position: absolute;
+            top: 147px;
+            width: 33px;
+            height: 52px;
+            border-radius: 100%;
+            border: 10px solid black;
+            background: #fff;
+            left: 260px;
+        }
+        .imaginechar_nose{
+            position: absolute;
+            width:0px;
+            height: 0px;
+            top: 180px;
+            left: 155px;
+            border-top: 40px solid black;
+            border-left: 35px solid transparent;
+            border-right: 35px solid transparent;
+            border-radius: 30%;
+
+        }
+        .imaginechar_etc{
+            position: absolute;
+            width: 10px;
+            height: 48px;
+            border: 10px solid blackl;
+            background: black;
+            left: 185px;
+            top: 190px;
+        }
+        .imaginechar_left_etc{
+            position: absolute;
+            top: 157px;
+            width: 40px;
+            height: 142px;
+            border-radius: 100%;
+            border: 1px solid transparent;
+            background: pink;
+            transform:rotate(90deg);
+
+        }
+        .imaginechar_right_etc{
+            position: absolute;
+            top: 157px;
+            left: 333px;
+            width: 40px;
+            height: 142px;
+            border-radius: 100%;
+            border: 1px solid transparent;
+            background: pink;
+            transform:rotate(90deg);
+        }
+        .imaginechar_mouse{
+            position: absolute;
+            top: 188px;
+            left: 122px;
+            width: 73px;
+            height: 68px;
+            border-bottom: 10px solid #000;
+            border-radius: 50%;
+            background: transparent;
+        }
+        .imaginechar_mouse2{
+            position: absolute;
+            top: 188px;
+            left: 185px;
+            width: 73px;
+            height: 68px;
+            border-bottom: 10px solid #000;
+            border-radius: 50%;
+            background: transparent;
+        }
+        .imaginechar_neck{
+            position: absolute;
+        } 
+    </style>
+</head>
+<body>
+    <div class="char_rel">
+        <div class="imaginechar">
+            <div class="imaginechar_left_ear">
+                <div class="imaginechar_left_left_ear"></div>
+            </div>
+            <div class="imaginechar_right_ear">
+                <div class="imaginechar_right_right_ear"></div>
+            </div>
+            <div class="imaginechar_face">
+                <div class="imaginechar_stripe_1"></div>
+                <div class="imaginechar_stripe_2"></div>
+                <div class="imaginechar_stripe_3"></div>
+                <div class="imaginechar_left_eye">
+                </div>
+                <div class="imaginechar_right_eye">
+                </div>
+                <div class="imaginechar_nose">
+
+                </div>
+                <div class="imaginechar_etc"></div>
+                <div class="imaginechar_left_etc">
+    
+                </div>
+                <div class="imaginechar_right_etc">
+    
+                </div>
+                <div class="imaginechar_mouse">
+    
+                </div>
+                <div class="imaginechar_mouse2">
+
+                </div>
+            </div>
+            <div class="imaginechar_neck">
+    
+            </div>
+        </div>
+    </div>
+</body>
+</html>
