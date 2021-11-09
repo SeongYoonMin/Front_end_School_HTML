@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  @keyframes hojun {
+    from{
+      background-position: 0px, 0px;
+    }
+    to {
+      background-position: -3730px, 0;
+    }
+  }
+  @keyframes subhojun{
+    from{
+      background-position: 0, 0;
+
+    }
+    to{
+      background-position: -5346px, 0;
+    }
+  }
+  @keyframes paullab{
+    from{
+      background-position: 0, 0;
+    }
+    to{
+      background-position: -937px, 0;
+    }
+  }
+  .building3{
+    margin: 50px;
+    width: 22.86px;
+    height: 34px;
+    background: url(./animation/building/frame_paullab.png) no-repeat;
+    animation: paullab 3s steps(41);
+    animation-fill-mode: forwards;
+  }
+  /* .building1{
+    margin: 50px;
+    width: 110px;
+    height: 180px;
+    background: url(./animation/building/building1.png) no-repeat;
+    animation: hojun 5s steps(33);
+    animation-fill-mode: forwards;
+  }
+  .building2{
+    margin: 50px;
+    width: 165px;
+    height: 180px;
+    background: url(./animation/building/building2.png) no-repeat;
+    animation: subhojun 5s steps(32);
+    animation-fill-mode: forwards;
+  } */
+  </style>
+</head>
+<body>
+  <div class="building1"></div>
+  <div class="building2"></div>
+  <div class="building3"></div>
+</body>
+</html>
