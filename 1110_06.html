@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body{
+            background-color: pink;
+
+        }
+
+        .container{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            box-sizing: border-box;
+            border: 10px solid black;
+            height: 500px;
+            width: 100%;
+            background-color: yellow;
+        }
+
+        .item{
+            margin:50px;
+            width:500px;
+            background-color: brown;
+        }
+
+        @media screen and (max-width:1000px) {
+            body{
+                background-color: red;
+            }
+            
+        }
+
+        @media screen and (max-width:600px) {
+            body{
+                background-color: violet;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid consequuntur cupiditate laborum corrupti tempora blanditiis ipsa aut iure in, tempore facere, saepe provident sint perspiciatis ex dignissimos, dolor voluptas iusto.
+        </div>
+        <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi suscipit molestias eos repellendus quod. Rem porro iste praesentium eos itaque? Necessitatibus debitis illo praesentium unde? Necessitatibus temporibus provident iure ea.</div>
+    </div>
+</body>
+</html>

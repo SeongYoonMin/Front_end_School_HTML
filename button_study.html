@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: black;
+        }
+        div{
+            position: relative;
+            margin: 100px auto;
+            width: 150px;
+            height: 50px;
+            background-color: white;
+            border: 2px solid rgb(255, 193, 181);
+            border-radius: 15px;
+            color: rgb(255, 193, 181);
+            text-align: center;
+            font-size: 32px;
+            cursor: pointer;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .btn::after{
+            position: absolute;
+            content: 'click';
+            width:90px;
+            height:50px;
+            background-color: black;
+            transform: translateX(100px);
+            transition: all 2s;
+            z-index: -1;
+        }
+        .btn:hover::after{
+            transform: translateX(-142.2px);
+        }
+        .btn::before{
+            position: absolute;
+            content: 'me!';
+            width:100px;
+            height:50px;
+            background-color: black;
+            transform: translateX(-200px);
+            transition: all 2s;
+            z-index: -1;
+        }
+        .btn:hover::before{
+            transform: translateX(50px);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="btn">
+        click me!
+    </div>
+</body>
+</html>

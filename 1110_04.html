@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button_정리</title>
+    <style>
+        div {
+            position: relative;
+            margin-bottom: 50px;
+            width: 150px;
+            height: 50px;
+            background-color: chocolate;
+            border: 2px solid black;
+            border-radius: 15px;
+            transition: all 2s;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            overflow: hidden;
+        }
+
+        .c1:hover{
+            transform: translateX(100px);
+            transition-timing-function: ease;
+        }
+        .c2:hover{
+            transform: translateX(100px);
+            transition-timing-function: linear;
+        }
+        .c3:hover{
+            background-color: crimson;
+        }
+        .c4:hover{
+            background-color: red;
+            color: black;
+        }
+        .c5:hover{
+            transform: scale(2);
+            background-color: red;
+            color: black;
+        }
+        .c6:hover{
+            width: 1000px;
+            height: 200px;
+        }
+        .c7:hover{
+            width: 300px;
+            letter-spacing: 50px;
+        }
+        .c8:hover{
+            width: 300px;
+            letter-spacing: 50px;
+        }
+        .c9:hover{
+            line-height: 50px;
+        }
+        .c10:hover{
+            opacity: 0.3;
+        }
+        .c11:hover{
+            border: 4px solid black;
+        }
+        .c12:hover{
+            transform: rotate(20deg);
+            transform-origin: top;
+        }
+        .c13:hover{
+            transform: rotate(20deg);
+            transform-origin: left;
+        }
+        .c14:hover{
+            transform: rotate(20deg);
+            transform-origin: right;
+        }
+        .c15:hover{
+            transform: rotate(20deg);
+            transform-origin: bottom;
+        }
+        .c16::before{
+            content: '';
+            position: absolute;
+            background-color: crimson;
+            right: 0;
+            bottom: 0;
+            width: 200px;
+            height: 10px;
+            transform: translateX(-300px);
+            overflow:hidden;
+            transition: all 1s;
+        }
+        .c16:hover::before{
+            transform: translateX(0);
+        }
+        .c16::after{
+            content: '';
+            position: absolute;
+            background-color: crimson;
+            top:0;
+            left:0;
+            width: 200px;
+            height: 10px;
+            transform: translateX(300px);
+            overflow:hidden;
+            transition: all 1s;
+        }
+        .c16:hover::after{
+            transform: translateX(0);
+        }
+        .c17:hover{
+            width: 300px;
+            letter-spacing: 50px;
+        }
+        .c18:hover{
+            width: 300px;
+            letter-spacing: 50px;
+        }
+        .c19::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: whitesmoke;
+            transition: all .5s;
+            transform: rotateX(90deg);
+        }
+
+        .c19:hover::before {
+            transform: rotateX(0);
+            z-index: -1;
+        }
+
+        .c19::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: whitesmoke;
+            transition: all .5s;
+            transform: rotateY(90deg);
+        }
+        
+        .c19:hover::after {
+            transform: rotateY(0);
+            z-index: -1;
+        }
+
+        .c19:hover {
+            color: tomato;
+            z-index: 1;
+        }
+        .c20::before{
+            position: absolute;
+            content: 'hello world';
+            color:white;
+            background-color: tomato;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-100%);
+            transition: all .5s;
+        }
+
+        .c20:hover::before{
+            transform: translateY(0);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="c1">ease</div>
+    <div class="c2">linear</div>
+    <div class="c3">background-color</div>
+    <div class="c4">color2</div>
+    <div class="c5">scale</div>
+    <div class="c6">sizeup</div>
+    <div class="c7">글자간격</div>
+    <div class="c8">love</div>
+    <div class="c9">line-h</div>
+    <div class="c10">opacity</div>
+    <div class="c11">border</div>
+    <div class="c12">rotate top</div>
+    <div class="c13">rotate right</div>
+    <div class="c14">rotate left</div>
+    <div class="c15">rotate bottom</div>
+    <div class="c16">before</div>
+    <div class="c17"></div>
+    <div class="c18"></div>
+    <div class="c19">ㅋㅋ</div>
+    <div class="c20">UP</div>
+</body>
+</html>
