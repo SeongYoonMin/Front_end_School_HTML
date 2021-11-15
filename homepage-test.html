@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <title>HomePage-Layout</title>
+    <style>
+        .container {
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+		}
+        header{
+            background-color: #222;
+            padding: 0 15px;
+        }
+        header a{
+            color: white;
+        }
+        .logo{
+            font-size: 20px;
+            padding: 10px;
+            line-height: 14px;
+        }
+        .item{
+            padding: 10px;
+        }
+        a:hover{
+            color: #ccc;
+        }
+        .menu{
+            display: flex;
+        }
+        .icon{
+            display: none;
+        }
+
+        .main-layout{
+            display: flex;
+			overflow: auto;
+            color: #222;
+        }
+        .main-layout article{
+            flex-wrap: wrap;
+            padding: 10px 5px;
+            flex: 1;
+        }
+        .headfont{
+            font-size: 40px;
+        }
+        .main-layout aside{
+            width: 400px;
+            height: 100vh;
+            background: pink;
+            padding: 10px 5px;
+        }
+        footer{
+            display: flex;
+            background: #222;
+            color: white;
+            font-size: 12px;
+            padding: 15px
+        }
+
+        @media screen and (max-width: 800px) {
+            .main-layout aside{
+                width: 100px;
+            }
+        }
+
+        @media screen and (max-width: 430px) {
+            .menu{
+                justify-content: space-between;
+            }
+            .item{
+                display: none;
+            }
+            .icon{
+                display: flex;
+                font-size: 20px;
+                line-height: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <ul class="menu">
+                <li class="logo">
+                    <a href="#">LOGO</a>
+                </li>
+                <li class="item">
+                    <a href="#">ABOUT ME</a>
+                </li>
+                <li class="item">
+                    <a href="#">SKILLS</a>
+                </li>
+                <li class="item has-submenu">
+                    <a href="#">BLOG</a>
+                </li>
+                <li class="item">
+                    <a href="#">CONTACT</a>
+                </li>
+                <li class="icon">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <section class="main-layout">
+            <article>
+                <p class="headfont">Lorem</p>
+                <br>
+                <p>Lorem article dolor sit amet consectetur adipisicing elit. Consequuntur minima delectus quo illum eos facilis corrupti voluptate, possimus officiis, maxime et architecto tenetur nemo omnis, molestiae repellat dolores recusandae. Recusandae.</p>
+            </article>
+            <aside>
+                <p>aside is lorem</p>
+            </aside>
+        </section>
+        <footer>
+            <p>footer</p>
+        </footer>
+    </div>
+</body>
+</html>
