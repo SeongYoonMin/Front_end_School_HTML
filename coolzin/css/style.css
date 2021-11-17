@@ -39,12 +39,14 @@
     background-color: #e8eef4;
     height: 30vh;
     text-align: center;
+    flex-direction: column;
 }
 
 .index-footer p{
     margin-top: 41px;
     font-size: 16px;
     color: #7c8081;
+    
 }
 
 /* main.html */
