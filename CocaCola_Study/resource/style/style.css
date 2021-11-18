@@ -1,0 +1,259 @@
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #EAE8FE;
+}
+
+#app{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.tit-app{
+    width: 436px;
+    height: 204px;
+    margin: 0 auto;
+    margin-bottom: 67px;
+    display: flex;
+    justify-content: center;
+}
+.tit-app .img-logo{
+    max-width: 386px;
+    max-height: 204px;
+}
+
+/* machine */
+
+.vending-machine{
+    display: flex;
+    width:360px;
+    height:545px;
+    background-color: white;
+    align-items: center;
+    flex-direction: column;
+    margin: 8px;
+}
+
+.list-item{
+    margin-top: 31px;
+    margin-bottom: 20px;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.list-item li{
+    position: relative;
+}
+.btn-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 94px;
+    height: 130px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 50%);
+}
+.btn-item:hover{
+    border: 3px solid #6327fe;
+}
+.btn-item img{
+    margin-top: 11px;
+    width: 36px;
+    height: 65px;
+    margin-bottom: 6px;
+}
+.btn-item .tit-item{
+    font-size: 9px;
+    font-weight: 500;
+}
+.btn-item .txt-item{
+    margin-top: 7px;
+    margin-bottom: 9px;
+    width: 39px;
+    height: 12p;
+    border: none;
+    border-radius: 50px;
+    background-color: #6327fe;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    padding: 5px 15px;
+}
+
+.cont-return{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 306px;
+    height: 33px;
+    margin-bottom: 11px;
+}
+.cont-return .info-balance{
+    width: 200px;
+    height: 33px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    align-items: center;
+    background-color: #EAE8FE;
+    padding: 10px 6px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.cont-return .btn-return{
+    width: 94px;
+    height: 33px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 50%);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.cont-put{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 306px;
+    height: 33px;
+    margin-bottom: 11px;
+   
+}
+.cont-put .inp-put{
+    width: 200px;
+    height: 33px;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+}
+.cont-put .btn-put{
+    width: 94px;
+    height: 32px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 50%);
+    border-radius: 5px;
+}
+
+.cont-get{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 306px;
+    height: 106px;
+}
+.cont-get .list-item-staged{
+    width:200px;
+    height: 106px;
+    border-radius: 5px;
+    background-color: #EAE8FE;
+    box-sizing: border-box;
+    padding-left: 12px;
+    padding-top: 12px;
+    overflow-y: scroll;
+    border: 1px solid #bdbdbd;
+}
+.list-item-staged .item-staged{
+    display:flex;
+    align-items: center;
+    width: 170px;
+    height: 45px;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 8px;
+    position:relative;
+}
+.item-staged .txt-item{
+    font-size: 9px;
+}
+.item-staged .num-counter{
+    position:absolute;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #bdbdbd;
+    font-size: 14px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 4px 11px 6px 11px;
+    text-align: center;
+    line-height: 20px;;
+}
+.cont-get .btn-get{
+    width: 94px;
+    height: 106px;
+    border-radius: 5px;
+    background-color: #6327fe;
+    color: white;
+}
+
+
+
+.my-info{
+    display: flex;
+    width: 360px;
+    height: 545px;
+    background-color: #EAE8FE;
+    margin: 8px;
+    flex-direction: column;
+}
+
+.cont-mymoney{
+    width: 360px;
+    height: 50px;
+    margin-bottom: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont-mymoney .info-mymoney{
+    width: 306px;
+    height: 32px;
+    background-color: #EAE8FE;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+.cont-myitems{
+    width: 360px;
+    height: 474px;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 25px 27px 52px 27px;
+    position:relative;
+}
+.cont-myitems .get-myitems{
+    font-size: 14px;
+    font-weight: 700;
+}
+.cont-myitems .list-item-staged{
+    width: 306px;
+    height: 364px;
+    margin-top: 13px;
+    background-color:#EAE8FE;
+    box-sizing: border-box;
+    padding-top: 12px;
+    padding-left: 12px;
+    border-radius: 5px;
+    border: 1px solid #bdbdbd;
+    overflow-y: scroll;
+}
+.cont-myitems .list-item-staged .item-staged{
+    width: 276px;
+    height: 46px;
+}
+.txt-total{
+    position: absolute;
+    right: 27px;
+    bottom: 26px;
+}
