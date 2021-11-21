@@ -1,0 +1,123 @@
+header .image-upload{
+    display: block;
+    margin: 77px 0 58px 149px;
+    width: 185px;
+    height: 54px;
+    text-decoration: none;
+    background: #2f80ed;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    line-height: 26px;
+    box-sizing: border-box;
+    padding: 14px 42px 14px 39px;
+}
+.cont-top{
+    display: inline-block;
+    position: relative;
+    width: 464px;
+    height: 463px;
+    position:relative;
+    margin: 0 50%;
+    transform: translateX(-50%);
+}
+.cont-top img{
+    position:absolute;
+}
+.cont-top .frog{
+    width: 464px;
+    height: 463px;
+    z-index: 30;
+}
+.cont-top .rabbit{
+    left:-206px;
+    top:34px;
+    width: 378px;
+    height: 378px;
+}
+.cont-top .rectangle{
+    width: 289px;
+    height: 289px;
+    left: -345px;
+    top: 82px;
+}
+.cont-top .lion{
+    width: 378px;
+    height: 378px;
+    right: -206px;
+    top: 34px;
+    z-index: 20;
+}
+.cont-top .dog{
+    width: 289px;
+    height: 289px;
+    right: -345px;
+    top: 82px;
+}
+.cont-top .frog-shadow{
+    top: 470px;
+    left: 13px;
+    width: 440px;
+    height: 437px;
+    z-index: 30;
+}
+.cont-top .rabbit-shadow{
+    width: 350px;
+    height: 350px;
+    top: 420px;
+    left: -190px;
+}
+.cont-top .rect-shadow{
+    width: 270px;
+    height: 270px;
+    left: -325px;
+    top: 390px;
+    z-index: -10;
+}
+.cont-top .lion-shadow{
+    width: 350px;
+    height: 350px;
+    right: -187px;
+    top: 420px;
+    z-index: 20;
+}
+.cont-top .dog-shadow{
+    width: 270px;
+    height: 270px;
+    right: -325px;
+    top: 390px;
+    z-index: -10;
+}
+.left-prev{
+    display: inline-block;
+    position: absolute;
+    left: 149px;
+    top: 390px;
+    width: 140px;
+    height: 62px;
+    border: 3px solid #828282;
+    box-sizing: border-box;
+    border-radius: 36.5px;
+    text-decoration: none;
+    color: #828282;
+    font-weight: 700;
+    text-align: center;
+    line-height: 50px;
+}
+.right-prev{
+    display: inline-block;
+    position: absolute;
+    right: 149px;
+    top: 390px;
+    width: 140px;
+    height: 62px;
+    border: 3px solid #828282;
+    box-sizing: border-box;
+    border-radius: 36.5px;
+    text-decoration: none;
+    color: #828282;
+    font-weight: 700;
+    text-align: center;
+    line-height: 50px;
+}
