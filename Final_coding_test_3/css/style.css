@@ -1,0 +1,124 @@
+/* body{
+    position:relative;
+} */
+
+.box-main{
+    display: flex;
+    position:relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    width: 608px;
+    height: 500px;
+    background-color: #333;
+    border-radius: 5px;
+    color: white;
+}
+
+.box-main-header{
+    position: absolute;
+    top: 62px;
+    left: 266px;
+}
+
+.drama-alluser{
+    display: block;
+    width: 150px;
+    height: 23px;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 500;
+    color: #bdbdbd;
+    margin-bottom: 13px;
+}
+
+
+.python-bootcamp{
+    display:block;
+    width: 240px;
+    height: 46px;
+    font-size: 32px;
+}
+
+.box-main .img-bootcamp{
+    display: inline-block;
+    position: absolute;
+    top: 52px;
+    left: -64px;
+    width: 281px;
+    height: 396px;
+    border-radius: 10px;
+}
+
+.box-main-score{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    width: 280px;
+    height: 172px;
+    top: 260px;
+    left: 266px;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.up-heart .btn-up{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 100%;
+    background-color: #333;
+    background-image: url("../images/icon_thumbs_up.png");
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.btn-up:hover{
+    background-image: url("../images/icon_thumbs_up_fill.png");
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #2f80ed;
+}
+#check-up:checked{
+    background-image: url("../images/icon_thumbs_up_fill.png");
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #2f80ed;
+}
+
+.up-heart .btn-heart{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 100%;
+    background-color: #333;
+    background-image: url("../images/icon_heart.png");
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.btn-heart:hover{
+    background-image: url("../images/icon_heart_fill.png");
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #eb5757;
+}
+
+.box-star img{
+    width: 51px;
+    height: 51px
+} 
