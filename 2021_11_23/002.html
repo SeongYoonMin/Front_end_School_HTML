@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tailwindcss flex</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- <div class="flex flex-wrap">
+        <div class="flex-1 flex-w30 border-solid border-4 border-black-300">
+            hello world
+        </div>
+        <div class="flex-1 flex-w50 border-solid border-4 border-black-300">
+            hellow world
+        </div>
+    </div> -->
+    <!-- flex-1 입력시 width값이 안먹힘! -->
+    <div class="flex flex-wrap">
+        <div class="w-8/12 border-solid border-4 border-black-300">
+            hello world
+        </div>
+        <div class="w-4/12 border-solid border-4 border-black-300">
+            hellow world
+        </div>
+    </div>
+    <!-- flex-w30, flex-w70 -->
+    <!-- width: w-8/12 -> 66.6666 -->
+    <!-- width: w-4/12 -> 33.3333 -->
+</body>
+</html>
