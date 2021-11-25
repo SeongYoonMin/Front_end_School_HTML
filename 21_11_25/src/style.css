@@ -1,0 +1,23 @@
+.box {
+  width: 10px;
+  height: 10px;
+}
+
+.box-one {
+  color: red;
+}
+
+.box-two {
+  color: orange;
+}
+
+.box-three {
+  color: yellow;
+}
+
+.four {
+  width: 5px;
+  height: 5px;
+  color: green;
+}
+/*# sourceMappingURL=style.css.map */

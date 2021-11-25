@@ -1,0 +1,18 @@
+.box{
+    &-one{
+        color: red;
+    }
+    &-two{
+        color: orange;
+    }
+    &-three{
+        color: yellow;
+    }
+    width: 10px;
+    height: 10px;
+    @at-root .four{
+        width: 5px;
+        height: 5px;
+        color: green;
+    }
+}
