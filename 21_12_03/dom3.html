@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        
+    </div>
+    <button class="change-red">red</button>
+    <button class="change-yellow">yellow</button>
+    <button class="change-green">green</button>
+    <script>
+        const redButton = document.querySelector('.change-red');
+        const yellowButton = document.querySelector('.change-yellow');
+        const greenButton = document.querySelector('.change-green');
+        const changeBox = document.querySelector('div');
+
+        redButton.addEventListener('click', function(){
+            changeBox.classList.add('red');
+            if((changeBox.classList.contains('yellow')==true)){ changeBox.classList.remove('yellow')};
+            if((changeBox.classList.contains('green')==true)){ changeBox.classList.remove('green')};
+            
+        })
+        yellowButton.addEventListener('click', function(){
+            changeBox.classList.add('yellow');
+            if((changeBox.classList.contains('red')==true)){ changeBox.classList.remove('red')};
+            if((changeBox.classList.contains('green')==true)){ changeBox.classList.remove('green')};
+            // changeBox.classList.remove('red', 'green'); 해도 상관없음.
+        })
+        greenButton.addEventListener('click', function(){
+            changeBox.classList.add('green');
+            if((changeBox.classList.contains('yellow')==true)){ changeBox.classList.remove('yellow')};
+            if((changeBox.classList.contains('red')==true)){ changeBox.classList.remove('red')};
+        })
+    </script>
+</body>
+</html>
