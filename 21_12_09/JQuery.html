@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            opacity: 0.3;
+            background-color: red;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="one">jQuery</h1>
+    <p>hello</p>
+    <button class="btn1">클릭</button>
+    <img>
+    <!-- 
+        1. items 부모를 찾아 background-color를 파란색으로 바꾸기
+        2. items 두번째 color을 빨간색으로 바꾸기
+        3. ul2의 자식인 li요소를 선택하여 1~3번까지 color 녹색으로 바꾸기
+        4. ul2의 자식인 li요소를 선택하여 7~10번까지 color 파란색, background-color를 빨간색으로 바꾸기
+    -->
+    <div class="wrapper">
+        <h1 class="title"></h1>
+        <ul class="ul1">
+            <li class="items">items1</li>
+            <li class="items">items2</li>
+            <li class="items">items3</li>
+        </ul>
+    </div>
+    <ul class="ul2">
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+    </ul>
+    <div class="box">
+
+    </div>
+    <textarea name="notepad" id="notepad" cols="30" rows="10"></textarea>
+    <button class="btn2">notepad Warning</button>
+    <button id="btn_ani">
+        클릭
+    </button>
+    <div class="box2">
+
+    </div>
+    <div class="box3">
+
+    </div>
+    <div class="box4"></div>
+    <script>
+        $('#one').text('Hello jQuery');
+        
+        $('.btn1').click(function(){
+            // $('p').hide();
+            // $('p').text('실습중이니 조용히 해주세요.');
+            // $('p').text('<strong>실습</strong>중이니 조용히 해주세요.'); << 태그가 들어가버림
+            $('p').html('<strong>실습</strong>중이니 조용히 해주세요.').css('color','pink').css('backgroundColor', 'rgb(0,7,21)');
+        });
+        $('img').attr('src','a.jpg');
+        $('img').attr('data-name', '프로필').attr('data-hello', '인사');
+        $('.btn2').click(function(){
+            let notepadValue = $('#notepad').val();
+            $('#notepad').val('plz input value');
+            alert(notepadValue);
+        });
+
+        $('.items').parent().css('backgroundColor', 'blue'); //1
+        $('.items:nth-child(2)').css('color', 'red'); //2
+        $('.ul2>li:lt(3)').css('color', 'green'); //3
+        $('.ul2>li:gt(5)').css('color', 'blue').css('backgroundColor', 'red'); //4
+        $('ul').append('<li>hello world end</li>'); // 마지막( stack 상 맨 위 )에 추가
+        $('ul').prepend('<li>hello world end</li>'); // 처음( stack 상 맨 아래 )에 추가
+        $('ul').before('<h2>시작</h2>');
+        $('ul').after('<h2>끝</h2>');
+
+        //옛날방식
+        // $(function(){
+        //     $('.box').fadeOut(3000),fadeIn(3000);
+        // })
+
+        $('#btn_ani').click(function(){
+            $('.box2').animate({
+                width: '300px',
+                height: '300px',
+                opacity: 1
+            }, 'slow');
+        });
+        $('.box3').hover(function(){
+            $(this).css('backgroundColor', 'yellow'); // 그냥 hover만 할 시 색이 바뀐채로 더이상 이벤트 발생 X
+        },function(){
+            $(this).css('backgroundColor', 'red'); // hover후 추가 함수적용으로 색이 다시 바뀌게끔함
+        });
+        $(".box4").mouseenter(function(){
+            alert("You entered p1!");
+        });
+        $(".box4").mouseleave(function(){
+            alert("Bye! You now leaved p1!");
+        });
+    </script>
+</body>
+</html>
