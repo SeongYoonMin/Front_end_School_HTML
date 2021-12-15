@@ -150,7 +150,7 @@ class Stack {
 }
 // 2. 연결리스트(linked list)
 
-class Node{
+class Node {
     constructor(data){
         this.data = data;
         this.next = null;
@@ -158,44 +158,234 @@ class Node{
 }
 
 class LinkedList {
-    constructor(){
+    constructor() {
         let init = new Node('init');
         this.head = init;
         this.tail = init;
 
-        this.nowNode = undefined;
-        this.dataCount = 0;
+        this.데이터수 = 0;
+    }
 
+    get fullData(){
+        // return 'hello world'
+        let 순회용현재노드 = this.head;
+        순회용현재노드 = 순회용현재노드.next;
+
+        let s = ''
+        for (let i = 0; i < this.데이터수; i++) {
+            s += `${순회용현재노드.data}, `;
+            순회용현재노드 = 순회용현재노드.next;
+        }
+        return JSON.parse(`[${s.slice(0, -2)}]`)
     }
 
     length(){
-        return this.dataCount;
+        return this.데이터수;
     }
 
     append(data){
-        let newNode = new Node(data);
-        // 마지막 값(null)은 새로운 노드가 됨.
-        this.tail.next = newNode;
-        // 마지막 노드는 새로운 노드가 됨.
-        this.tail = newNode;
-        this.dataCount += 1;
+        let 새로운노드 = new Node(data);
+        // 마지막 값(null)은 새로운 노드가 됨
+        this.tail.next = 새로운노드;
+        // 마지막 노드는 새로운 노드가 됨
+        this.tail = 새로운노드;
+        this.데이터수 += 1;
     }
-    
+
     toString(){
-        let ciecleNode = this.head;
-        ciecleNode = ciecleNode.next;
+        // return 'hello world';
+        let 순회용현재노드 = this.head;
+        순회용현재노드 = 순회용현재노드.next;
 
         let s = '';
-        for (let i = 0; i < this.dataCount; i++){
-            s += `${ciecleNode},`
-            ciecleNode = ciecleNode.next;
+        for (let i = 0; i < this.데이터수; i++) {
+            s += `${순회용현재노드.data},`
+            순회용현재노드 = 순회용현재노드.next;
         }
-        return s.slice(0,-1);
+        return s.slice(0, -1);
+    }
+
+    insert(index, data){
+        let 순회용현재노드 = this.head;
+        순회용현재노드 = 순회용현재노드.next;
+
+        for (let i = 0; i < index - 1; i++) {
+            순회용현재노드 = 순회용현재노드.next;
+        }
+
+        let 새로운노드 = new Node(data);
+        
+        새로운노드.next = 순회용현재노드.next;
+        순회용현재노드.next = 새로운노드;
+
+        this.데이터수 += 1;
     }
 }
-// 3. 정렬
+
+// console
+l = new LinkedList();
+l.append(1);
+l.append(2);
+l.append(3);
+l.append(10);
+l.append(20);
+l.append(30);
+l.length();
+console.log(l.fullData);
+// 3. 정렬 (sort. merge, quick, select, insert)
+// select
+let value = [199, 22, 33, 12, 32, 64, 72, 222, 233];
+let arr = [];
+let valueLength = value.length;
+
+for (let i = 0; i < valueLength; i++){
+    let minvalue = Math.min(...value)
+    arr.push(minvalue);
+    value.splice(value.indexOf(minvalue),1)
+}
+
+console.log(arr);
+// pop 할 시 length의 길이가 줄어듬.
+// for (let i = 0; i< value.length; i++){
+//     console.log(value.pop())
+//     console.log(i)
+// }
+
+// insert
+let value = [199, 22, 33, 12, 32, 64, 72, 222, 233];
+let arr = [];
+let arrLength = value.length;
+function insertIndex(arr, insertValue){
+    for (const i in arr) {
+        if(insertValue < arr[i]) {
+            return i;
+        }
+    }
+    return arr.length;
+}
+
+for (let i = 0; i < arrLength; i++){
+    insertValue = value.shift();
+    index = insertIndex(arr, insertValue);
+    arr.splice(index, 0, insertValue);
+    console.log(`INDEX : ${index}\ninsertValue : ${insertValue}\n Array: ${arr}`)
+}
+
+// merge
+let value = [5, 10, 66, 77, 54, 32, 11, 15];
+
+function mergeSort(valueArr){
+    let valueArrLength = valueArr.length;
+    if (valueArrLength <= 1){
+        return valueArr
+    }
+    let middleValue = parseInt(valueArrLength / 2); // 절반을 나누는 기준
+    let groupOne = mergeSort(valueArr.slice(0, middleValue)); // 반으로 나눈 정렬들
+    let groupTwo = mergeSort(valueArr.slice(middleValue)); // 반으로 나눈 정렬들
+    return `FirstGroup : ${groupOne}\nSecondGroup : ${groupTwo}`
+}
+
+console.log(mergeSort(value));
+// merge2
+let 입력값 = [5, 10, 66, 77, 54, 32, 11, 15];
+
+function 병합정렬(입력배열) {
+    let 입력배열의길이 = 입력배열.length;
+    let 결과값 = [];
+
+    if (입력배열의길이 <= 1) {
+        return 입력배열
+    }
+
+    let 중간값 = parseInt(입력배열의길이 / 2);
+    let 그룹하나 = 병합정렬(입력배열.slice(0, 중간값));
+    let 그룹둘 = 병합정렬(입력배열.slice(중간값))
+
+    while (그룹하나.length != 0 && 그룹둘.length != 0) {
+        if (그룹하나[0] < 그룹둘[0]) {
+            결과값.push(그룹하나.shift());
+        } else {
+            결과값.push(그룹둘.shift());
+        }
+    }
+
+    while(그룹하나.length != 0){
+        결과값.push(그룹하나.shift());
+    }
+
+    while(그룹둘.length != 0){
+        결과값.push(그룹둘.shift());
+    }
+
+    return 결과값
+}
+
+console.log(병합정렬(입력값));
+
+// QuickSort
+
+let value = [66, 77, 54, 32, 10, 5, 11, 15];
+function quickSort(valueArr){
+    let valueArrLength = valueArr.length;
+
+    if(valueArrLength <= 1){
+        return valueArr
+    }
+
+    const pivot = [valueArr.shift()];
+    const groupOne = [];
+    const groupTwo = [];
+
+    for (let i in valueArr){
+        if (valueArr[i] < pivot){
+            groupOne.push(valueArr[i]);
+        }
+        else{
+            groupTwo.push(valueArr[i]);
+        }
+    }
+    console.log(`Pivot : ${pivot}`);
+    console.log(`FirstGroup : ${groupOne}\nSecondGroup : ${groupTwo}`);
+
+    return quickSort(groupOne).concat(pivot, quickSort(groupTwo));
+}
+
+quickSort(value);
 // 4. 페이지 교체 알고리즘
+
+// LRU Algorithm
+// hit 시 가장 최근(맨 오른쪽)으로 끌고옴.
+// [“Jeju”, “Pangyo”, “Seoul”, “NewYork”, “LA”, “Seoul”, “LA”]
+// [“Jeju”] 1회차
+
+// [“Jeju”, “Pangyo”, “Seoul”, “NewYork”, “LA”, “Seoul”, “LA”]
+// [“Jeju”, “Pangyo”] 2회차
+
+// [“Jeju”, “Pangyo”, “Seoul”, “NewYork”, “LA”, “Seoul”, “LA”]
+// [“Jeju”, “Pangyo”, “Seoul”] 3회차
+
+// [“Jeju”, “Pangyo”, “Seoul”, “NewYork”, “LA”, “Seoul”, “LA”]
+// [“Pangyo”, “Seoul”, “NewYork”] 4회차
+
+// [“Jeju”, “Pangyo”, “Seoul”, “NewYork”, “LA”, “Seoul”, “LA”]
+// [“Seoul”, “NewYork”, “LA”] 5회차
+
+// [“Jeju”, “Pangyo”, “Seoul”, “NewYork”, “LA”, “Seoul”, “LA”]
+// [“NewYork”, “LA”, “Seoul”] 6회차
+
+// [“Jeju”, “Pangyo”, “Seoul”, “NewYork”, “LA”, “Seoul”, “LA”]
+// [“NewYork”, “Seoul”, “LA”] 7회차
+
+// FIFO Algorithm
+// hit 시 캐시 내 변화 x.
+
+// hit - 1
+// miss - 5
+
 // 5. 트리와 그래프
+
+
+
 // 6. 트리의 순회
 
 // 목차(실전 코딩테스트 풀이)
