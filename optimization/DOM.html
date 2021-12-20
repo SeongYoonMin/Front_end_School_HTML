@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(2, 7, 21);
+            color: rgb(255, 193, 181);
+        }
+        .figImg{
+            width: 500px;
+            height: 500px;
+        }
+        .figCap{
+            font-size: 20px;
+            
+        }
+        article, figure{
+            margin: 0;
+        }
+        .newsCheck{
+            margin: 15px;
+            width: 150px;
+            height: 20px;
+            border: none;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <h1>돔 접근 테스트!</h1>
+    <article class="parent">
+        <figure>
+            <img src="https://images-ext-1.discordapp.net/external/miv509J6UdXffMxzcD5G-E4WXKD6d8FgyX5VdWKVE7Y/https/pds.joongang.co.kr/news/component/htmlphoto_mmdata/202112/13/e4725896-2596-44f0-8b95-ab3faaa76d7d.jpg" alt="A" class="figImg">
+            <figcaption class="figCap">유재석씨가 코로나에 감염되었다는 소식입니다.</figcaption>
+        </figure>
+    </article>
+    <button class="newsCheck">뉴스 확인</button>
+
+    <script>
+        // const targetImg = document.querySelector('.figImg');
+        // const targetTxt = document.querySelector('.figCap');
+        // document에서 특정 클래스를 찾게되면 모든 class를 다 뒤져야하기때문에 효율을 위해 특정 부모요소에서 추적할 수 있도록 해주는게 좋다.
+        const parent = document.querySelector('.parent');
+        const targetImg = parent.querySelector('.figImg');
+        const targetTxt = parent.querySelector('.figCap');
+        const newsCheckButton = document.querySelector('.newsCheck');
+        newsCheckButton.addEventListener('click', function(){
+            targetImg.setAttribute('src', 'https://images-ext-2.discordapp.net/external/Vu8h2Lh0rB9nLBIUb1vz34Jxs_QkIv_aXemdWtMHYYg/https/file.mk.co.kr/meet/neds/2021/07/image_readtop_2021_654175_16256093474708254.jpg?width=451&height=600');
+            targetTxt.textContent = '유재석씨가 코로나에 걸렸다는 소식은 사실이 아니였던것으로 파악되었습니다!';
+        })
+    </script>
+</body>
+</html>
